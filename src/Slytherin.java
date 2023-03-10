@@ -3,8 +3,8 @@ public class Slytherin extends Hogwarts {
  private int determination;
  private int ambition;
 
- public Slytherin(int powerMagic, int transgress, int cunning, int determination, int ambition) {
-  super(powerMagic, transgress);
+ public Slytherin(String name, String lastName, int powerMagic, int transgress, int cunning, int determination, int ambition) {
+  super(name, lastName, powerMagic, transgress);
   this.cunning = cunning;
   this.determination = determination;
   this.ambition = ambition;
@@ -32,5 +32,15 @@ public class Slytherin extends Hogwarts {
 
  public void setAmbition(int ambition) {
   this.ambition = ambition;
+ }
+
+ @Override
+ public String toString() {
+  return getName() + " " + getLastName() +
+          ", сила магии:  " + getPowerMagic() +
+          ", трасгрессия: " + getTransgress() +
+          ", хитрость: " + cunning +
+          ", решительность: " + determination +
+          ", амбициозность: " + ambition ;
  }
 }

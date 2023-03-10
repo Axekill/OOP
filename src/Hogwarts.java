@@ -1,8 +1,12 @@
 public class Hogwarts {
+    private final String name;
+    private final String lastName;
     private int powerMagic;
     private int transgress;
 
-    public Hogwarts(int powerMagic, int transgress) {
+    public Hogwarts(String name, String lastName, int powerMagic, int transgress) {
+        this.name = name;
+        this.lastName = lastName;
         this.powerMagic = powerMagic;
         this.transgress = transgress;
     }
@@ -25,7 +29,17 @@ public class Hogwarts {
         return powerMagic;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
     public int getTransgress() {
         return transgress;
     }
+
+
 }

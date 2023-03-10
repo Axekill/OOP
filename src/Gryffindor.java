@@ -3,12 +3,11 @@ public class Gryffindor extends Hogwarts {
     private int honor;
     private int bravery;
 
-    public Gryffindor(int nobility, int honor, int bravery, int powerMagic, int transgress) {
-        super(powerMagic, transgress);
+    public Gryffindor(String name, String lastName, int powerMagic, int transgress, int nobility, int honor, int bravery) {
+        super(name, lastName, powerMagic, transgress);
         this.nobility = nobility;
         this.honor = honor;
         this.bravery = bravery;
-
     }
 
     public int getNobility() {
@@ -21,5 +20,20 @@ public class Gryffindor extends Hogwarts {
 
     public int getBravery() {
         return bravery;
+    }
+
+    public int sumPoints() {
+        return nobility + honor + bravery;
+    }
+
+
+    @Override
+    public String toString() {
+        return getName() + " " + getLastName() +
+                ", сила магии:  " + getPowerMagic() +
+                ", трасгрессия: " + getTransgress() +
+                ", благородство: " + nobility +
+                ", честь: " + honor +
+                ", храбрость: " + bravery;
     }
 }

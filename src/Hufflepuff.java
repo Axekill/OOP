@@ -1,10 +1,10 @@
-public class Hufflepuff extends Hogwarts{
+public class Hufflepuff extends Hogwarts {
     private int diligence;
     private int loyalty;
     private int honesty;
 
-    public Hufflepuff(int diligence, int loyalty, int honesty,int powerMagic, int transgress) {
-        super(powerMagic, transgress);
+    public Hufflepuff(String name, String lastName, int powerMagic, int transgress, int diligence, int loyalty, int honesty) {
+        super(name, lastName, powerMagic, transgress);
         this.diligence = diligence;
         this.loyalty = loyalty;
         this.honesty = honesty;
@@ -32,5 +32,15 @@ public class Hufflepuff extends Hogwarts{
 
     public void setHonesty(int honesty) {
         this.honesty = honesty;
+    }
+
+    @Override
+    public String toString() {
+        return getName() + " " + getLastName() +
+                ", сила магии:  " + getPowerMagic() +
+                ", трасгрессия: " + getTransgress() +
+                ", трудолюбие: " + diligence +
+                ", верность: " + loyalty +
+                ", честь: " + honesty ;
     }
 }

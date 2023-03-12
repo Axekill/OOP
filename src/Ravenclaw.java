@@ -33,6 +33,9 @@ public class Ravenclaw extends Hogwarts {
     public void setWitty(int witty) {
         this.witty = witty;
     }
+    public int sumPoints() {
+        return smart+wise+witty;
+    }
 
     @Override
     public String toString() {

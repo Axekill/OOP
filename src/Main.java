@@ -11,6 +11,42 @@ public class Main {
         printStudent.print(slytherins);
     }
 
+    private static void bestGryff(Gryffindor[] gryffindors) {
+        if (gryffindors[0].sumPoints() > gryffindors[1].sumPoints()) {
+            System.out.println(gryffindors[0].getName() + " лучший Гриффендорец, чем " + gryffindors[1].getName());
+        } else {
+            System.out.println(gryffindors[1].getName() + " лучший Гриффендорец, чем " + gryffindors[0].getName());
+        }
+    }
+
+    private static void bestHuff(Hufflepuff[] hufflepuffs) {
+        if (hufflepuffs[0].sumPoints() > hufflepuffs[1].sumPoints()) {
+            System.out.println(hufflepuffs[0].getName() + " лучший Гриффендорец, чем " + hufflepuffs[1].getName());
+        } else {
+            System.out.println(hufflepuffs[1].getName() + " лучший Гриффендорец, чем " + hufflepuffs[0].getName());
+        }
+    }
+
+    private static void bestRav(Ravenclaw[] ravenclaws) {
+        if (ravenclaws[0].sumPoints() > ravenclaws[1].sumPoints()) {
+            System.out.println(ravenclaws[0].getName() + " лучший Гриффендорец, чем " + ravenclaws[1].getName());
+        } else {
+            System.out.println(ravenclaws[1].getName() + " лучший Гриффендорец, чем " + ravenclaws[0].getName());
+        }
+    }
+
+    private static void bestSlyth(Slytherin[] slytherins) {
+        if (slytherins[0].sumPoints() > slytherins[1].sumPoints()) {
+            System.out.println(slytherins[0].getName() + " лучший Гриффендорец, чем " + slytherins[1].getName());
+        } else {
+            System.out.println(slytherins[1].getName() + " лучший Гриффендорец, чем " + slytherins[0].getName());
+        }
+    }
+
+    private static void abilityHogwarts(Gryffindor[] gryffindors, Slytherin[] slytherins) {
+        gryffindors[0].compare(slytherins[0]);
+    }
+
     public static void main(String[] args) {
         Gryffindor[] gryffindors = {
                 new Gryffindor("Гарри", "Поттер", 56, 333, 59, 56, 89),
@@ -35,22 +71,15 @@ public class Main {
         print(gryffindors, hufflepuffs, ravenclaws, slytherins);
         System.out.println();
         bestGryff(gryffindors);
+        System.out.println();
+        bestHuff(hufflepuffs);
+        System.out.println();
+        bestRav(ravenclaws);
+        System.out.println();
+        bestSlyth(slytherins);
+        abilityHogwarts(gryffindors, slytherins);
 
 
-    }
-
-    private static int bestGryff(Gryffindor[] gryffindors) {
-        //int sumPoints = 0;
-
-        int max = Integer.MIN_VALUE;
-        for (Gryffindor gryffindor : gryffindors) {
-            //sumPoints = gryffindor.getBravery() + gryffindor.getHonor() + gryffindor.getNobility();
-            max = Math.max(max, gryffindor.sumPoints());
-            //System.out.println(sumPoints);
-
-            System.out.println("Лучший гриффендорец " +max);
-        }
-        return max;
     }
 
 

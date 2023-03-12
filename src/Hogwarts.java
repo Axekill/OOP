@@ -40,6 +40,19 @@ public class Hogwarts {
     public int getTransgress() {
         return transgress;
     }
+    public void compare(Hogwarts student) {
+        if (powerMagic > student.powerMagic) {
+            System.out.println(name + " обладает большей магией, чем " + student.name);
+        } else {
+            System.out.println(student.name + " обладает большей магией, чем " + name);
+        }
+        if (transgress > student.transgress) {
+            System.out.println(name + " трансгрессирует дальше, чем  " + student.name);
+        } else {
+            System.out.println(student.name + " трансгрессирует дальше, чем  " + name);
+        }
+
+    }
 
 
 }

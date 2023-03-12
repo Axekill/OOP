@@ -33,6 +33,9 @@ public class Slytherin extends Hogwarts {
  public void setAmbition(int ambition) {
   this.ambition = ambition;
  }
+ public int sumPoints() {
+  return cunning+determination+ambition;
+ }
 
  @Override
  public String toString() {
